@@ -40,6 +40,23 @@ export function App() {
 
           <BoxDelete>x</BoxDelete>
         </Box>
+
+        <Box>
+          <BoxIcon color="#73B172" bgColor="#DAF2D9">
+            <File size={24} weight="fill" />
+          </BoxIcon>
+          <BoxInfo>
+            <BoxDataFile>
+              <strong>Scann_158.pdf</strong>
+              <p>30 MB </p>
+            </BoxDataFile>
+
+            <BoxProgressBar bgColor="#73B172" variant="done">
+              <progress value={100} max={100}></progress>
+              <p>100%</p>
+            </BoxProgressBar>
+          </BoxInfo>
+        </Box>
       </BoxContainer>
     </Container>
   )
