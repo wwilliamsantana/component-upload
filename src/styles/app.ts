@@ -99,7 +99,7 @@ export const BoxDataFile = styled.div`
 `
 
 interface BoxProgressBarProps {
-  bgColor: string
+  bgColor?: string
   variant?: 'done' | 'process' | 'error'
 }
 
@@ -120,6 +120,7 @@ export const BoxProgressBar = styled.div<BoxProgressBarProps>`
     &::-webkit-progress-bar {
       background-color: #e3e3ed;
     }
+
     &::-webkit-progress-value {
       background: ${(props) => props.bgColor};
     }

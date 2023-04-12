@@ -1,4 +1,9 @@
-import { CloudArrowUp, File } from '@phosphor-icons/react'
+import {
+  ArrowCounterClockwise,
+  CloudArrowUp,
+  File,
+  X,
+} from '@phosphor-icons/react'
 import {
   Box,
   BoxContainer,
@@ -38,7 +43,9 @@ export function App() {
             </BoxProgressBar>
           </BoxInfo>
 
-          <BoxDelete>x</BoxDelete>
+          <BoxDelete>
+            <X size={18} />
+          </BoxDelete>
         </Box>
 
         <Box>
@@ -56,6 +63,27 @@ export function App() {
               <p>100%</p>
             </BoxProgressBar>
           </BoxInfo>
+        </Box>
+
+        <Box>
+          <BoxIcon color="#E36363" bgColor="#F2D9D9">
+            <File size={24} weight="fill" />
+          </BoxIcon>
+          <BoxInfo>
+            <BoxDataFile>
+              <strong>picture1.jpg</strong>
+              <p>6 MB</p>
+            </BoxDataFile>
+
+            <BoxProgressBar variant="error">
+              <progress value={0} max={100}></progress>
+              <p>Erro</p>
+            </BoxProgressBar>
+          </BoxInfo>
+
+          <BoxDelete>
+            <ArrowCounterClockwise size={18} />
+          </BoxDelete>
         </Box>
       </BoxContainer>
     </Container>
