@@ -12,6 +12,9 @@ export const GlobalStyles = createGlobalStyle`
 
 :root{
   font-size: 62.5%;
+  line-height: 130%;
+  font-family: 'Inter', sans-serif;
+
 }
 
 body{
