@@ -20,6 +20,7 @@ export const GlobalStyles = createGlobalStyle`
 body{
   font-size: 1.6rem;
   background-color: #FBFAFF;
+  
 }
 
 input, textarea, button{

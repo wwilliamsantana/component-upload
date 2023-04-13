@@ -4,6 +4,7 @@ export const Container = styled.div`
   min-height: 100vh;
   display: grid;
   place-content: center;
+  margin: 2rem 0;
 `
 
 export const UploadArea = styled.div`
@@ -43,9 +44,6 @@ export const UploadArea = styled.div`
   }
 `
 export const BoxContainer = styled.div`
-  max-width: 440px;
-  width: full;
-
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
