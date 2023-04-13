@@ -15,15 +15,41 @@ import {
   Container,
   UploadArea,
 } from './styles/app'
+import { ChangeEvent, useState } from 'react'
+
+interface FilesPorps {
+  id: number
+  name: string
+  size: number
+}
 
 export function App() {
+  const [files, setFiles] = useState<FilesPorps[]>([])
+
+  function handleFile(e: ChangeEvent<HTMLInputElement>) {
+    if (!e.target.files || e.target.files[0].type !== 'text/plain') {
+      return alert('Erro File')
+    } else {
+      const { name, size } = e.target.files[0]
+
+      setFiles((state) => [...state, { id: files.length, name, size }])
+    }
+  }
+
+  console.log(files)
+
   return (
     <Container>
       <UploadArea>
         <CloudArrowUp size={48} />
         <strong>Importe seus arquivos</strong>
         <p>Arraste ou clique para fazer upload</p>
-        <input type="file" id="inputFile" />
+        <input
+          type="file"
+          id="inputFile"
+          onChange={handleFile}
+          accept="text/plain"
+        />
       </UploadArea>
 
       <BoxContainer>
@@ -48,6 +74,7 @@ export function App() {
           </BoxDelete>
         </Box>
 
+        {/*
         <Box>
           <BoxIcon color="#73B172" bgColor="#DAF2D9">
             <File size={24} weight="fill" />
@@ -64,7 +91,6 @@ export function App() {
             </BoxProgressBar>
           </BoxInfo>
         </Box>
-
         <Box>
           <BoxIcon color="#E36363" bgColor="#F2D9D9">
             <File size={24} weight="fill" />
@@ -85,6 +111,7 @@ export function App() {
             <ArrowCounterClockwise size={18} />
           </BoxDelete>
         </Box>
+    */}
       </BoxContainer>
     </Container>
   )
