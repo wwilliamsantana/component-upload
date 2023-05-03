@@ -1,7 +1,7 @@
 # Upload de arquivos
 
 ## :computer: Sobre
-Projeto foi idealizado a partir de um desafio proposto pela #Rocketseat, onde foi disponibilizado o layout pelo [FIGMA](https://www.figma.com/community/file/1225440656930547927)
+Projeto foi idealizado a partir de um desafio proposto pela #Rocketseat, onde foi disponibilizado **APENAS** o layout pelo [FIGMA](https://www.figma.com/community/file/1225440656930547927)
 ### Proposta:
 Era necessário criar um componente que permitisse o upload de arquivos e exibisse em tempo real o progresso do carregamento até a conclusão.
 ### Resolução:
